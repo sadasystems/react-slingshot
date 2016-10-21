@@ -73,9 +73,9 @@ describe("<FuelSavingsForm />", () => {
             calculateFuelSavings={calculateFuelSavings}
             fuelSavings={fuelSavings}
         />);
-        const expectedOption1 = "<option value='week'>Week</option>";
-        const expectedOption2 = "<option value='month'>Month</option>";
-        const expectedOption3 = "<option value='year'>Year</option>";
+        const expectedOption1 = "<option value=\"week\">Week</option>";
+        const expectedOption2 = "<option value=\"month\">Month</option>";
+        const expectedOption3 = "<option value=\"year\">Year</option>";
 
         expect(wrapper.find("select").childAt(0).html()).to.equal(expectedOption1);
         expect(wrapper.find("select").childAt(1).html()).to.equal(expectedOption2);
