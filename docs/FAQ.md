@@ -58,7 +58,7 @@ Unfortunately, scripts in package.json can't be commented inline because the JSO
 │   ├── startMessage.js       # **NEEDS DOCUMENTATION**
 │   └── testSetup.js          # Configures mocha
 ├── webpack.config.dev.js     # Configures webpack for development builds
-└── webpack.config.prod.js    # Configures webpack for production builds
+└── webpack.config.production.js    # Configures webpack for production builds
 ```
 
 ### What are the dependencies in package.json used for?

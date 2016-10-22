@@ -1,23 +1,22 @@
 // This script removes demo app files
+/* eslint-disable no-console */
 import rimraf from "rimraf";
 import fs from "fs";
 import { chalkSuccess } from "./chalkConfig";
 
-/* eslint-disable no-console */
-
 const pathsToRemove = [
-    "./src/actions/*", "./src/utils", "./src/components/*", "./src/constants/*", "./src/containers/*", "./src/images",
-    "./src/reducers/*", "./src/store/store.spec.js", "./src/styles", "./src/routes.js", "./src/index.js"
+    "./client/actions/*", "./client/utils", "./client/components/*", "./client/constants/*", "./client/containers/*", "./client/images",
+    "./client/reducers/*", "./client/store/store.spec.js", "./client/styles", "./client/routes.js", "./client/index.js"
 ];
 
 const filesToCreate = [
     {
-        path: "./src/components/emptyTest.spec.js",
+        path: "./client/components/emptyTest.spec.js",
         content: "// Must have at least one test file in this directory or Mocha will throw an error."
     }, {
-        path: "./src/index.js", content: "// Set up your application entry point here..."
+        path: "./client/index.js", content: "// Set up your application entry point here..."
     }, {
-        path: "./src/reducers/index.js",
+        path: "./client/reducers/index.js",
         content: "// Set up your root reducer here...\n import { combineReducers } from 'redux';\n export default combineReducers;"
     }
 ];

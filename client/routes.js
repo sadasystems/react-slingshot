@@ -3,7 +3,7 @@ import { Route, IndexRoute } from "react-router";
 
 import App from "./components/App.jsx";
 import HomePage from "./components/HomePage.jsx";
-import FuelSavingsPage from "./containers/FuelSavingsPage.jsx"; // eslint-disable-line import/no-named-as-default
+import FuelSavingsPage from "./containers/FuelSavingsPage.jsx";
 import AboutPage from "./components/AboutPage.jsx";
 import NotFoundPage from "./components/NotFoundPage.jsx";
 

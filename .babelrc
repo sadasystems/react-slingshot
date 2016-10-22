@@ -8,12 +8,16 @@
     "development": {
       "presets": [
         "react-hmre"
+      ],
+      "plugins": [
+        "transform-object-rest-spread"
       ]
     },
     "production": {
       "plugins": [
         "transform-react-constant-elements",
-        "transform-react-remove-prop-types"
+        "transform-react-remove-prop-types",
+        "transform-object-rest-spread"
       ]
     }
   }
