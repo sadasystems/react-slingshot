@@ -1,0 +1,20 @@
+{
+  "name": "react-slingshot",
+  "dependencies": {},
+  "globalDependencies": {
+    "enzyme": "registry:dt/enzyme#2.5.1+20161019142319",
+    "expect": "registry:dt/expect#1.13.4+20160316155526",
+    "express": "registry:dt/express#4.0.0+20160708185218",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20161012061536",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "react": "registry:dt/react#0.14.0+20161008064207",
+    "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",
+    "react-router": "registry:dt/react-router#2.0.0+20160928130202",
+    "react-router/history": "registry:dt/react-router/history#2.0.0+20160830150755",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
+    "source-map": "registry:dt/source-map#0.0.0+20161003134342",
+    "webpack": "registry:dt/webpack#1.12.9+20160927034556"
+  }
+}
