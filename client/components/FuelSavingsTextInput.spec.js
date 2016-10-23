@@ -32,7 +32,6 @@ describe("<FuelSavingsTextInput />", () => {
         const expected = "input";
 
         expect(actual).to.equal(expected);
-        props.onChange.should.not.have.been.called; //eslint-disable-line no-unused-expressions
         wrapper.simulate("change", { target: { value: 101 } });
         expect(props.onChange).to.have.been.calledWith("newMpg", 101);
     });

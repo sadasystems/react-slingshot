@@ -1,5 +1,5 @@
 module.exports = function (wallaby) {
-
+    "use strict";
     return {
         files: [
             "client/**/*.js*",
@@ -17,6 +17,7 @@ module.exports = function (wallaby) {
         ],
         env: {
             type: "node",
+            runner: "node",
             params: {
                 env: "NODE_ENV=test"
             }
@@ -59,6 +60,7 @@ module.exports = function (wallaby) {
                 userAgent: "node.js"
             };
 
+            //noinspection JSUnresolvedVariable
             documentRef = document; //eslint-disable-line no-undef
         }
     };

@@ -1,3 +1,4 @@
+/// <reference path="globals/chai/index.d.ts" />
 /// <reference path="globals/enzyme/index.d.ts" />
 /// <reference path="globals/expect/index.d.ts" />
 /// <reference path="globals/express-serve-static-core/index.d.ts" />
