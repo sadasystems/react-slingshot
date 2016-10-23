@@ -23,7 +23,6 @@ application.use(require("webpack-hot-middleware")(applicationCompiler));
 application.use("/client", express.static(path.join(__dirname, "../client")));
 
 application.get("*", (request, response) => {
-    console.log("I'm here");
     let clientEntryPoint = path.join(__dirname, "../client/index.html");
     response.sendFile(clientEntryPoint);
 });
