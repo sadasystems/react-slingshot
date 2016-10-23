@@ -1,3 +1,7 @@
+// Register babel so that it will transpile ES6 to ES5
+// before our tests run.
+require("babel-register")();
+
 // Tests are placed alongside files under test.
 // This file does the following:
 // 1. Sets the environment to 'test' so that
@@ -13,10 +17,28 @@ process.env.NODE_ENV = "test"; //eslint-disable-line no-process-env
 
 // Disable webpack-specific features for tests since
 // Mocha doesn't know what to do with them.
-[".css", ".scss", ".png", ".jpg"].forEach(ext => {
-  require.extensions[ext] = () => null;
+[".css", ".scss", ".png", ".jpg"].forEach(extension => {
+  require.extensions[extension] = () => null;
 });
 
-// Register babel so that it will transpile ES6 to ES5
-// before our tests run.
-require("babel-register")();
+let jsdom = require("jsdom").jsdom;
+let exposedProperties = ["window", "navigator", "document"];
+
+global.document = jsdom("");
+global.window = document.defaultView;
+Object.keys(document.defaultView).forEach((property) => {
+  if (typeof global[property] === "undefined") {
+    exposedProperties.push(property);
+    global[property] = document.defaultView[property];
+  }
+});
+
+global.localStorage = {
+  getItem: function () { },
+  setItem: function () { }
+};
+
+global.navigator = {
+  userAgent: "node.js"
+};
+
