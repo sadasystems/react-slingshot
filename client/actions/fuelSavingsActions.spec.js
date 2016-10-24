@@ -29,14 +29,18 @@ describe("Actions", () => {
         dateModified: null,
         necessaryDataIsProvidedToCalculateSavings: false,
         savings: {
-            monthly: 0, annual: 0, threeYear: 0
+            monthly: 0,
+            annual: 0,
+            threeYear: 0
         }
     };
 
     it("should create an action to save fuel savings", () => {
         const dispatch = sinon.spy();
         const expected = {
-            type: ActionTypes.SAVE_FUEL_SAVINGS, dateModified, settings: appState
+            type: ActionTypes.SAVE_FUEL_SAVINGS,
+            dateModified,
+            settings: appState
         };
 
         // we expect this to return a function since it is a thunk
@@ -52,7 +56,11 @@ describe("Actions", () => {
         const value = 100;
         const actual = ActionCreators.calculateFuelSavings(appState, fieldName, value);
         const expected = {
-            type: ActionTypes.CALCULATE_FUEL_SAVINGS, dateModified, settings: appState, fieldName, value
+            type: ActionTypes.CALCULATE_FUEL_SAVINGS,
+            dateModified,
+            settings: appState,
+            fieldName,
+            value
         };
 
         expect(actual).to.deep.equal(expected); // Notice use of deep because it"s a nested object

@@ -51,7 +51,6 @@ Unfortunately, scripts in package.json can't be commented inline because the JSO
 │   │   └── setupPrompts.js   # **NEEDS DOCUMENTATION**
 │   ├── build.js              # Runs the production build
 │   ├── chalkConfig.js        # Centralized configuration for chalk (adds color to console statements)
-│   ├── distServer.js         # Starts webserver and opens final built app that's in dist in your default browser
 │   ├── nodeVersionCheck.js   # **NEEDS DOCUMENTATION**
 │   ├── removeDemo.js         # **NEEDS DOCUMENTATION**
 │   ├── srcServer.js          # Starts dev webserver with hot reloading and opens your app in your default browser
@@ -82,7 +81,6 @@ Unfortunately, scripts in package.json can't be commented inline because the JSO
 |babel-preset-react-hmre|Hot reloading preset for Babel|
 |babel-preset-react| Add JSX support to Babel |
 |babel-preset-stage-1| Include stage 1 feature support in Babel |
-|browser-sync| Supports synchronized testing on multiple devices and serves local app on public URL |
 |chai|Assertion library for use with Mocha|
 |chalk|Adds color support to terminal |
 |cross-env|Cross-environment friendly way to handle environment variables|

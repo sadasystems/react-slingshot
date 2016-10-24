@@ -27,16 +27,12 @@ describe("Math Helper", () => {
             MathHelper.addArray([]).should.equal(0);
         });
 
-        // it("returns null when passed null", () => {
-        // 	should.not.exist(MathHelper.addArray(null));
-        // });
-
         it("returns 6 when passed [2,4]", () => {
-            MathHelper.addArray([ 2, 4 ]).should.equal(6);
+            MathHelper.addArray([2, 4]).should.equal(6);
         });
 
         it("returns 7 when passed [-6, 11, 2]", () => {
-            MathHelper.addArray([ -6, 11, 2 ]).should.equal(7);
+            MathHelper.addArray([-6, 11, 2]).should.equal(7);
         });
     });
 

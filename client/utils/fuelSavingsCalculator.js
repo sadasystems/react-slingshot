@@ -15,7 +15,7 @@ const fuelSavingsCalculator = function () {
 
     // public
     return {
-        calculateMilesDrivenPerMonth: function (milesDriven, milesDrivenTimeframe) {
+        calculateMilesDrivenPerMonth(milesDriven, milesDrivenTimeframe) {
             const monthsPerYear = 12;
             const weeksPerYear = 52;
 
@@ -31,7 +31,7 @@ const fuelSavingsCalculator = function () {
             }
         },
 
-        calculateSavingsPerMonth: function (settings) {
+        calculateSavingsPerMonth(settings) {
             if (!settings.milesDriven) {
                 return 0;
             }
@@ -45,11 +45,11 @@ const fuelSavingsCalculator = function () {
         },
 
 
-        necessaryDataIsProvidedToCalculateSavings: function (settings) {
+        necessaryDataIsProvidedToCalculateSavings(settings) {
             return settings.newMpg > 0 && settings.tradeMpg > 0 && settings.newPpg > 0 && settings.tradePpg > 0 && settings.milesDriven > 0;
         },
 
-        calculateSavings: function (settings) {
+        calculateSavings(settings) {
             const monthlySavings = this.calculateSavingsPerMonth(settings);
 
             return {

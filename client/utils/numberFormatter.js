@@ -27,7 +27,7 @@ class NumberFormatter {
         const roundedValueContainsDecimalPlace = (roundedValue.indexOf(".") !== -1);
 
         if (roundedValueContainsDecimalPlace) {
-            const numbersToTheRightOfDecimal = roundedValue.split(".")[ 1 ];
+            const numbersToTheRightOfDecimal = roundedValue.split(".")[1];
 
             switch (numbersToTheRightOfDecimal.length) {
                 case 0:
@@ -41,16 +41,19 @@ class NumberFormatter {
         return roundedValue;
     }
 
-    static isInt(n) {
-        if (n === "" || n === null) {
+    static isInt(number) {
+        if (number === "" || number === null) {
             return false;
         }
 
-        return n % 1 === 0;
+        return number % 1 === 0;
     }
 
     static scrubFormatting(value) {
-        return value.toString().replace("$", "").replace(",", "").replace(".", "");
+        return value.toString()
+            .replace("$", "")
+            .replace(",", "")
+            .replace(".", "");
     }
 }
 

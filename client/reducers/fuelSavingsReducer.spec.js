@@ -16,7 +16,9 @@ describe("Reducers::FuelSavings", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
     };
@@ -33,7 +35,9 @@ describe("Reducers::FuelSavings", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
     };
@@ -48,7 +52,11 @@ describe("Reducers::FuelSavings", () => {
     });
 
     it("should handle SAVE_FUEL_SAVINGS", () => {
-        const action = { type: ActionTypes.SAVE_FUEL_SAVINGS, dateModified, settings: getAppState() };
+        const action = {
+            type: ActionTypes.SAVE_FUEL_SAVINGS,
+            dateModified,
+            settings: getAppState()
+        };
         const expected = Object.assign(getAppState(), { dateModified });
 
         expect(reducer(getAppState(), action)).to.deep.equal(expected);
@@ -64,7 +72,11 @@ describe("Reducers::FuelSavings", () => {
         };
 
         const expectedMpg = 30;
-        const expectedSavings = { monthly: "$43.33", annual: "$519.96", threeYear: "$1,559.88" };
+        const expectedSavings = {
+            monthly: "$43.33",
+            annual: "$519.96",
+            threeYear: "$1,559.88"
+        };
 
         expect(reducer(getAppState(), action).newMpg).to.equal(expectedMpg);
         expect(reducer(getAppState(), action).savings).to.deep.equal(expectedSavings);

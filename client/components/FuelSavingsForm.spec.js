@@ -24,7 +24,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -64,7 +66,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -77,9 +81,20 @@ describe("<FuelSavingsForm />", () => {
         const expectedOption2 = "<option value=\"month\">Month</option>";
         const expectedOption3 = "<option value=\"year\">Year</option>";
 
-        expect(wrapper.find("select").childAt(0).html()).to.equal(expectedOption1);
-        expect(wrapper.find("select").childAt(1).html()).to.equal(expectedOption2);
-        expect(wrapper.find("select").childAt(2).html()).to.equal(expectedOption3);
+        expect(wrapper.find("select")
+            .childAt(0)
+            .html())
+            .to.equal(expectedOption1);
+
+        expect(wrapper.find("select")
+            .childAt(1)
+            .html())
+            .to.equal(expectedOption2);
+
+        expect(wrapper.find("select")
+            .childAt(2)
+            .html())
+            .to.equal(expectedOption3);
     });
 
     it("should contain <FuelSavingsResults /> when necessary conditions are met", () => {
@@ -98,7 +113,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: true,
             savings: {
-                monthly: 10, annual: 120, threeYear: 360
+                monthly: 10,
+                annual: 120,
+                threeYear: 360
             }
         };
 
@@ -128,7 +145,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -157,7 +176,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -187,7 +208,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -198,7 +221,7 @@ describe("<FuelSavingsForm />", () => {
         />);
 
         wrapper.find("input[type='submit']").simulate("click");
-        expect(saveFuelSavings.args[ 0 ][ 0 ]).to.equal(fuelSavings);
+        expect(saveFuelSavings.args[0][0]).to.equal(fuelSavings);
     });
 
 
@@ -217,7 +240,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -228,7 +253,11 @@ describe("<FuelSavingsForm />", () => {
         />);
 
         expect(calculateFuelSavings.calledOnce).to.be.false;
-        wrapper.find(FuelSavingsTextInput).first().simulate("change");
+
+        wrapper.find(FuelSavingsTextInput)
+            .first()
+            .simulate("change");
+
         expect(calculateFuelSavings.calledOnce).to.be.true;
     });
 
@@ -247,7 +276,9 @@ describe("<FuelSavingsForm />", () => {
             dateModified: null,
             necessaryDataIsProvidedToCalculateSavings: false,
             savings: {
-                monthly: 0, annual: 0, threeYear: 0
+                monthly: 0,
+                annual: 0,
+                threeYear: 0
             }
         };
 
@@ -260,6 +291,6 @@ describe("<FuelSavingsForm />", () => {
         expect(calculateFuelSavings.calledOnce).to.be.false;
         wrapper.find("select").simulate("change", { target: { value: "year" } });
         expect(calculateFuelSavings.calledOnce).to.be.true;
-        expect(calculateFuelSavings.args[ 0 ][ 2 ]).to.equal("year");
+        expect(calculateFuelSavings.args[0][2]).to.equal("year");
     });
 });

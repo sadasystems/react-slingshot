@@ -8,7 +8,11 @@ class MathHelper {
             return "";
         }
 
-        const scrubbedNumber = numberToRound.toString().replace("$", "").replace(",", "");
+        const scrubbedNumber = numberToRound
+            .toString()
+            .replace("$", "")
+            .replace(",", "");
+
         return Math.round(scrubbedNumber * Math.pow(10, numberOfDecimalPlaces)) / Math.pow(10, numberOfDecimalPlaces);
     }
 
